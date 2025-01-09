@@ -1,10 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  /* Шрифты */
-  /* --sz1: 18px; */
-  --main-font: 400 18px "Inter Regular", sans-serif; /* основной */
-  --accent-font: 14px "Press Start 2P Regular";
-  /* --main-font: italic small-caps bold 12px/30px Georgia"Inter Regular", sans-serif; */
-
+  /* ПЕРЕМЕННЫЕ */
+  /* Типографика */
+  --card__title_weight: 700; /* вес шрифта заголовка карточки */
+  --card__text_weight: 400; /* вес шрифта текста карточки */
+  --main-font: var(--card__text_weight) 18px "Inter Regular", sans-serif; /* основной шрифт */
+  --accent-font: var(--card__text_weight) 14px "Press Start 2P", sans-serif; /* акцентный шрифт */
+  
+  /* Геометрия элементов */
+  /*--mobile__width: 375px; /* ширина экрана mobile-версии */
 }

@@ -15,7 +15,15 @@
   min-block-size: 100dvb;
   /* vvk */
   font: var(--main-font);
+  /* font-variation-settings: 'wght' var(--card__text_weight); */ /* применено через font */
 
+  background: url(../images/bg.png),
+  /* background: url(../images/bg.webp), */
+    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* фон не прокручивается */
 }
 
 .w1 {
@@ -29,5 +37,39 @@
 
   /* font-family: 'Press Start 2P Regular';  
   font-size: 100px; */
-  font-variation-settings: 'wght' 800;
+  /* font-variation-settings: 'wght' 800; */
+}
+
+.header {
+  border: 1px dashed red;
+  margin-block-start: 100px; /* 100px 370px; */
+  margin-inline: auto;
+  inline-size: clamp(375px, 48.6%, 700px);
+
+  padding-block: clamp(7.5rem, 0.751vw + 7.324rem, 8rem);
+
+  font: var(--accent-font);
+  text-align: center;
+  text-transform: uppercase;
+  background: #fff;
+  border: 2px solid #000;
+}
+
+.header__title {
+  padding-block-end: 20px;
+  font-weight: var(--card__text_weight);
+  font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem); /* 65px при 1440px, 49px при 375px) */
+  /* border: 1px dashed blue; */
+}
+
+.header__text {
+  font-weight: var(--card__text_weight);
+  font-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem); /* 23px при 1440px, 14px при 375px) */
+  /* border: 1px dashed red; */
+}
+
+@media (width <= 375px) {
+  .header {
+    inline-size: 100%;
+  }
 }

@@ -9,7 +9,7 @@ https://github.com/vvk2020/zakrivayuschiy-teg-f
 - [ ] Карточки сделать <li>/<ul>
 - [ ] добавить ARIA
 - [ ] оптимизировать изображения:
-  - [ ] PNG => WEBP
+  - [x] PNG => WEBP
   - [ ] размер
 
 ## 📌 Notes & Recommendations
