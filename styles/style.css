@@ -1,13 +1,12 @@
 /* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, 
+чтобы в HTML некоторые классы были названы особым образом:
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
 */
 
 .page {
@@ -17,8 +16,7 @@
   font: var(--main-font);
   /* font-variation-settings: 'wght' var(--card__text_weight); */ /* применено через font */
 
-  background: url(../images/bg.png),
-  /* background: url(../images/bg.webp), */
+  background: url(../images/bg.webp),
     linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
   background-position: center;
   background-size: cover;
