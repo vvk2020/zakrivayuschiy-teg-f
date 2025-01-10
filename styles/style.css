@@ -12,9 +12,15 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+
   /* vvk */
+  inline-size: clamp(375px, 48.6%, 700px);
+  /* inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem); */
+
+  margin-inline: auto;
+
   font: var(--main-font);
-  /* font-variation-settings: 'wght' var(--card__text_weight); */ /* применено через font */
+  /* font-variation-settings: 'wght' var(--card__text_weight); */ /* реализовано через font */
 
   background: url(../images/bg.webp),
     linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
@@ -41,9 +47,6 @@
 .header {
   border: 1px dashed red;
   margin-block-start: 100px; /* 100px 370px; */
-  margin-inline: auto;
-  inline-size: clamp(375px, 48.6%, 700px);
-
   padding-block: clamp(7.5rem, 0.751vw + 7.324rem, 8rem);
 
   font: var(--accent-font);
@@ -56,18 +59,92 @@
 .header__title {
   padding-block-end: 20px;
   font-weight: var(--card__text_weight);
-  font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem); /* 65px при 1440px, 49px при 375px) */
+  font-size: clamp(
+    3.063rem,
+    1.502vw + 2.71rem,
+    4.063rem
+  ); /* 65px при 1440px, 49px при 375px) */
   /* border: 1px dashed blue; */
 }
 
 .header__text {
   font-weight: var(--card__text_weight);
-  font-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem); /* 23px при 1440px, 14px при 375px) */
-  /* border: 1px dashed red; */
+  font-size: clamp(
+    0.875rem,
+    0.845vw + 0.677rem,
+    1.438rem
+  ); /* 23px при 1440px, 14px при 375px) */
+  line-height: 1; /* для FireFox (в Chrome не обязательно), fig: 23px */
+}
+
+.card-list {
+  padding-block-start: 100px;
+}
+
+.card {
+  background: #fff;
+  font-size: 18px;
+  border: 2px solid #000;
+}
+
+.card__title {
+  padding: 5px 10px 4px; /* Pixel Perfect */
+  font-size: inherit;
+  line-height: 1.222;
+}
+
+.card__image-wrapper {
+  position: relative; /* для позиционирования .card__label */
+  aspect-ratio: 1 / 1;
+  font-size: 0; /* убираем  автоотступы */
+  /* убираем дублирование границ и добавляем недостающиую */
+  border: inherit;
+  border-inline: none;
+}
+
+.card__image {
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__label {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font: var(--accent-font);
+  font-size: 14px;
+  text-transform: uppercase;
+  /* z-index: 1; */
+
+ОТСЮДА
+
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  border: 1px solid #fff;
+}
+
+.card__text {
+  /* padding-block-start: 25px;
+  padding-block-end: 25px; */
+  /* padding-block: 25px; */
+}
+
+.card__controls {
+  /* padding-inline: 25px; */
+  padding: 25px;
+}
+
+.card__text p:not(:first-of-type) {
+  padding-block-start: 27px;
 }
 
 @media (width <= 375px) {
   .header {
-    inline-size: 100%;
+    inline-size: 100%; /* необязательно, работает clamp() в .page */
+  }
+
+  .card__title {
+    padding: 5px 10px 3px; /* Pixel Perfect */
   }
 }

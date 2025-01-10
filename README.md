@@ -11,7 +11,8 @@ https://github.com/vvk2020/zakrivayuschiy-teg-f
 
 
 ## 📌 Notes & Recommendations
-1. 
+1. flex-grow / flex-shrink ?
+2. Добавить img другие размеры (source ?) для 375/1440px
 
 ## ✅ Checklist
 - [ ] W3C validation
