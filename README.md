@@ -26,8 +26,8 @@ https://github.com/vvk2020/zakrivayuschiy-teg-f
 - [ ] Финишная оценка
 
 ## 📅 Roadmap
-- [ ] 2025-01-14 🏳️ Review 1
-- [ ] 2025-01-19 🏁 Finish Review
+- [ ] 2025-01-16 🏳️ Review 1
+- [ ] 2025-01-20 🏁 Finish Review
 - [ ] 2025-01-26 💀 Deadline
 - [ ] 2025-01-20 📖 4 спринт: Soft Skills & Допматериалы
 - [ ] 2025-01-27 🔥 FINISH
