@@ -149,8 +149,8 @@
 
 .card__like-button {
   inline-size: 130px;
-  font: var(--accent-font);
-  line-height: 90%;
+  /* font: var(--accent-font); */
+  /* line-height: 90%; */
   border: 2px solid #000;
   background: transparent;
 }
@@ -158,6 +158,44 @@
 .card__icon-button {
   border: none;
   background: transparent;
+}
+
+
+
+
+.dialog {
+  /* margin: 0 auto; */
+  /* background-color: lightcoral; */
+  /* display: flex;
+  justify-content: center; */
+  padding-block: 50px 100px;
+}
+
+.button-save {  
+  /* background-color: aquamarine; */
+  display: flex; /* block; */
+  /* flex-direction: column; */
+  margin-inline: auto;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 8px;
+  /* appearance: none; */
+  padding-block: 15px;
+}
+
+.button__text {
+  font: var(--accent-font);
+  line-height: 90%;
+}
+
+.button-save svg {
+  /* block-size: 28px; */
+}
+
+.button-save-icon {
+  /* border: 1px solid red; */
+  display: block;
+  height: 21px;
 }
 
 @media (width <= 375px) {
