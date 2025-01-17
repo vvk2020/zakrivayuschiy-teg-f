@@ -83,7 +83,7 @@
                   </svg>
                 </button>
 
-                <button class="card__like-button">
+                <button class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -148,7 +148,7 @@
                   </svg>
                 </button>
 
-                <button class="card__like-button">
+                <button class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -213,7 +213,7 @@
                   </svg>
                 </button>
 
-                <button class="card__like-button">
+                <button class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -277,7 +277,7 @@
                   </svg>
                 </button>
 
-                <button class="card__like-button">
+                <button class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -344,7 +344,7 @@
                   </svg>
                 </button>
 
-                <button class="card__like-button">
+                <button class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -406,7 +406,7 @@
                   </svg>
                 </button>
 
-                <button class="card__like-button">
+                <button class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -472,7 +472,7 @@
                   </svg>
                 </button>
 
-                <button class="card__like-button">
+                <button class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -541,7 +541,7 @@
                   </svg>
                 </button>
 
-                <button class="card__like-button">
+                <button class="button card__like-button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -549,23 +549,39 @@
           </li>
         </ul>
       </section>
-      <!-- Секция вызова диалога сохранения -->
-      <section class="dialog">
-        <button class="button-save">
-          <svg viewBox="0 0 40 40" class="button-save-icon">
+      <!-- Секция диалога сохранения и его вызова -->
+      <section class="dialog-panel">
+        <button
+          class="button dialog-panel__button-save"
+          type="button"
+          onclick="window.SaveDialog.show()">
+          <svg viewBox="0 0 40 40" class="save-icon" aria-hidden="true">
             <use href="./svg/floppy.svg#fdd" />
+            <!-- Modal -->
           </svg>
           <span class="button__text">Сохранить на память</span>
         </button>
-      </section>
 
-      <!-- Тест шрифта -->
-      <!-- <div class="w1">CCC</div> -->
-      <!-- Тест svg -->
-      <!-- <svg viewBox="0 0 24 24">
-        <use href="./svg/floppy.svg#fdd" />
-      </svg>
-      <img src="./svg/floppy.svg#fdd" alt="FDD" /> -->
+        <dialog
+          id="SaveDialog"
+          class="dialog-save"
+          aria-labelledby="dialog-text">
+          <div class="dialog__intro">
+            <svg viewBox="0 0 40 40" class="save-icon" aria-hidden="true">
+              <use href="./svg/floppy.svg#fdd" />
+            </svg>
+            <span id="dialog-text" class="dialog-text">
+              Вставьте дискету, чтобы продолжить
+            </span>
+          </div>
+          <button
+            class="button dialog-save__button-close"
+            type="button"
+            onclick="window.SaveDialog.close()">
+            <span class="button__text">OK</span>
+          </button>
+        </dialog>
+      </section>
     </main>
     <script src="./scripts/like.js"></script>
   </body>

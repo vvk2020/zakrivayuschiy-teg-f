@@ -12,6 +12,10 @@
   /* Геометрия элементов */
   /*--mobile__width: 375px; /* ширина экрана mobile-версии */
 
+  /* Границы */
+  --border-line: 2px solid #000;
+
   /* Палитра цветов */
   --card__label_shadow-color: rgba(255, 255, 255, 0.5); /* обводка label карточек */
+  --bg-color: #fff; /* фон */
 }
