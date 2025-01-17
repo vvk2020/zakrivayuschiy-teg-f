@@ -136,6 +136,7 @@
 .button {
   border: var(--border-line); /*2px solid #000;*/
   background: transparent;
+  font: var(--accent-font); /* для корректных padding имени кнопки */
 }
 
 .card__like-button {
@@ -175,9 +176,13 @@
 .dialog-save {
   margin-top: 100px; /* ВРЕМЕННО */
   inline-size: 357px;
-  padding: 30px; /* 30px => Pixel Perfect */
+  padding: 30px;
+  /* padding: 30px 30px 29px; /* 30px => Pixel Perfect */
   border: var(--border-line);
 }
+
+
+opened
 
 .dialog-save::backdrop {
   background: rgba(0, 0, 0, 0.75)
@@ -191,12 +196,8 @@
 }
 
 .dialog__intro .save-icon {
-  /* display: block; */
-  height: 40px;
-  /* aspect-ratio: 1 / 1; */
-  /* flex-grow: 1; */
+  block-size: 40px; /* height: 40px; */
   flex-shrink: 0;
-  /* width: 47px; */
 }
 
 .dialog-text {
@@ -207,10 +208,15 @@
 
 .dialog-save__button-close {
   margin-block-start: 30px;
-  /* justify-content: space-between; */
+  /* justify-content: start; */
   inline-size: 100%;
-  padding-block: 7.5px 5px; /* 12.5px => Pixel Perfect */
+  padding-block: 9px; /* 12.5px => Pixel Perfect */
 
+
+
+
+  font: var(--accent-font);
+  line-height: 110%;
 }
 
 
