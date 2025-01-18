@@ -22,7 +22,7 @@
   font: var(--main-font);
   /* font-variation-settings: 'wght' var(--card__text_weight); */ /* реализовано через font */
 
-  background: url(../images/bg.webp),
+  background: url(../images/bg_1440w.svg),
     linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
   background-position: center;
   background-size: cover;
@@ -85,17 +85,19 @@
 
 .card__image-wrapper {
   position: relative; /* для позиционирования .card__label */
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1;  /* для сохранения единообразного отображения карточек, без рывков при загрузке */
   font-size: 0; /* убираем  автоотступы */
   /* убираем дублирование границ и добавляем недостающиую */
   border: inherit;
   border-inline: none;
+
 }
 
 .card__image {
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 1 / 1;
 }
 
 .card__label {
@@ -181,11 +183,8 @@
   border: var(--border-line);
 }
 
-
-opened
-
 .dialog-save::backdrop {
-  background: rgba(0, 0, 0, 0.75)
+  background: rgba(0, 0, 0, 0.75);
 }
 
 .dialog__intro {
@@ -211,16 +210,18 @@ opened
   /* justify-content: start; */
   inline-size: 100%;
   padding-block: 9px; /* 12.5px => Pixel Perfect */
-
-
-
-
   font: var(--accent-font);
   line-height: 110%;
 }
 
 
 @media (width <= 375px) {
+
+  .page {
+    background: url(../images/bg_375w.svg),
+      linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  }
+
   .header {
     inline-size: 100%; /* необязательно, работает clamp() в .page */
   }
