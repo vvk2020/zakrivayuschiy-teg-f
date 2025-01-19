@@ -3,19 +3,39 @@
 
 :root {
   /* ПЕРЕМЕННЫЕ */
+
   /* Типографика */
   --card__title_weight: 700; /* вес шрифта заголовка карточки */
   --card__text_weight: 400; /* вес шрифта текста карточки */
   --main-font: var(--card__text_weight) 18px "Inter Regular", sans-serif; /* основной шрифт */
   --accent-font: var(--card__text_weight) 14px "Press Start 2P", sans-serif; /* акцентный шрифт */
-  
-  /* Геометрия элементов */
-  /*--mobile__width: 375px; /* ширина экрана mobile-версии */
-
-  /* Границы */
-  --border-line: 2px solid #000;
 
   /* Палитра цветов */
-  --card__label_shadow-color: rgba(255, 255, 255, 0.5); /* обводка label карточек */
-  --bg-color: #fff; /* фон */
+  --card__text_shadow-color: rgba(10, 75, 120, 0.5); /* тень текста карточек */
+  --card__label_shadow-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* обводка label карточек */
+  --accent-color: #000; /* акцентный цвет */
+
+  /* Границы */
+  --border-line: 2px solid var(--accent-color);
+
+  /* Фон */
+  --bg_color: #fff; /* основной цвет */
+  --bg-grid_accent-color: #d3d3d3; /* акцентный цвет градиентной сетки */
+  --bg-grid_extra-color: transparent; /* дополнительный цвет градиентной сетки */
+  --bg-vertical-grad_top-color: #e7e7e7; /* начальный цвет вертикального градиента фона (верх) */
+  --bg-vertical-grad_bottom-color: #1a1a1a; /* конечный цвет вертикального градиента фона (верх) */
+
+  /* Фильтры картинок */
+  --card-image_common-filter: drop-shadow(
+    0px 10px 10px rgba(0, 0, 0, 0.8)
+  ); /* карточек */
+
+  /* Прочее */
+  --card__image-url: url(../images/bg_1440w.svg); /* путь к фоновому изображению */
+  --bg-grid_snap-step: 2px; /* шаг отрисовки градиентной сетки фона */
 }

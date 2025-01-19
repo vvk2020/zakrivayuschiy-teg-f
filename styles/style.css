@@ -20,25 +20,44 @@
   margin-inline: auto;
 
   font: var(--main-font);
-  /* font-variation-settings: 'wght' var(--card__text_weight); */ /* реализовано через font */
+  /* font-variation-settings: 'wght' var(--card__text_weight); */ /* не нужно, реализовано через --main-font */
 
-  background: url(../images/bg_1440w.svg),
-    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  background-image: var(
+    --card__image-url
+  ); /* для фона перед отрисовкой градиентов */
+  background: repeating-linear-gradient(
+      90deg,
+      var(--bg-grid_accent-color) 0,
+      var(--bg-grid_accent-color) var(--bg-grid_snap-step),
+      var(--bg-grid_extra-color) var(--bg-grid_snap-step),
+      var(--bg-grid_extra-color) calc(var(--bg-grid_snap-step) * 2)
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--bg-grid_accent-color) 0,
+      var(--bg-grid_accent-color) var(--bg-grid_snap-step),
+      var(--bg-grid_extra-color) var(--bg-grid_snap-step),
+      var(--bg-grid_extra-color) calc(var(--bg-grid_snap-step) * 2)
+    ),
+    linear-gradient(
+      180deg,
+      var(--bg-vertical-grad_top-color) 0.01%,
+      var(--bg-vertical-grad_bottom-color) 100%
+    );
+
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; /* для background-image */
   background-attachment: fixed; /* фон не прокручивается */
 }
 
 .header {
-  border: 1px dashed red;
   margin-block-start: 100px; /* 100px 370px; */
   padding-block: clamp(7.5rem, 0.751vw + 7.324rem, 8rem);
-
   font: var(--accent-font);
   text-align: center;
   text-transform: uppercase;
-  background: var(--bg-color);
+  background: var(--bg_color);
   border: var(--border-line); /*2px solid #000;*/
 }
 
@@ -72,7 +91,7 @@
 }
 
 .card {
-  background: var(--bg-color);
+  background: var(--bg_color);
   font-size: 18px;
   border: var(--border-line); /*2px solid #000;*/
 }
@@ -85,12 +104,11 @@
 
 .card__image-wrapper {
   position: relative; /* для позиционирования .card__label */
-  aspect-ratio: 1 / 1;  /* для сохранения единообразного отображения карточек, без рывков при загрузке */
+  aspect-ratio: 1 / 1; /* для сохранения единообразного отображения карточек, без рывков при загрузке */
   font-size: 0; /* убираем  автоотступы */
   /* убираем дублирование границ и добавляем недостающиую */
   border: inherit;
   border-inline: none;
-
 }
 
 .card__image {
@@ -99,6 +117,42 @@
   object-position: center;
   aspect-ratio: 1 / 1;
 }
+
+/* ФИЛЬТРЫ ИЗОБРАЖЕНИЙ КАРТОЧЕК */
+
+.image-confucius {
+  filter: saturate(120%) var(--card-image_common-filter);
+}
+
+.image-cicero {
+  filter: contrast(120%) brightness(110%) var(--card-image_common-filter);
+}
+
+.image-sakura {
+  filter: blur(0.01rem) saturate(150%) var(--card-image_common-filter);
+}
+
+.image-iskander {
+  filter: sepia(80%) var(--card-image_common-filter);
+}
+
+.image-ford {
+  filter: grayscale(0.25) var(--card-image_common-filter);
+}
+
+.image-tolstoy {
+  filter: hue-rotate(20deg) var(--card-image_common-filter);
+}
+
+.image-valery {
+  filter: brightness(110%) sepia(80%) var(--card-image_common-filter);
+}
+
+.image-zola {
+  filter: var(--card-image_common-filter);
+}
+
+/********************************/
 
 .card__label {
   position: absolute;
@@ -112,9 +166,7 @@
 }
 
 .card__text {
-  /* padding-block-start: 25px;
-  padding-block-end: 25px; */
-  /* padding-block: 25px; */
+  text-shadow: 0 0 2px var(--card__text_shadow-color);
 }
 
 .card__board {
@@ -127,18 +179,59 @@
 }
 
 .button-panel {
-  /* background-color: lightcoral; */
   display: flex;
   justify-content: end;
-  /* gap: 10px; */
   block-size: 38px;
   margin-block-start: 25px;
+  gap: 6px;
+}
+
+.card__icon-button {
+  padding: 3px 0 0; /* Pixel Perfect */
+  /* place-items: center; */
+
+}
+
+.card__icon-button:focus {
+  /* outline: none; */
+  outline: 2px solid var(--accent-color);
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  transition: all 0.3s ease;
 }
 
 .button {
+  position: relative; /* для позиционирования ::before */
   border: var(--border-line); /*2px solid #000;*/
   background: transparent;
   font: var(--accent-font); /* для корректных padding имени кнопки */
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
+  transition: box-shadow 0.3s ease;
+  /* filter: drop-shadow(2px 2px 0px red); */
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: left; /* старт трансформации - слева */
+  transition: transform 0.5s ease-in-out;
+  background-color: var(--accent-color);
+}
+
+.button:hover::before {
+  transform: scaleX(1); /* translateX(-50%); */
+  transition: transform 0.5s ease-in-out;
 }
 
 .card__like-button {
@@ -153,7 +246,7 @@
 /* ДИАЛОГ СОХРАНЕНИЯ И ПАНЕЛЬ ЕГО ВЫЗОВА */
 
 .dialog-panel {
-  background-color: var(--bg-color);
+  background-color: var(--bg_color);
   padding-block: 50px 100px;
 }
 
@@ -166,13 +259,22 @@
 }
 
 .button__text {
+  /* position: relative; */
   font: var(--accent-font);
   line-height: 90%;
+  mix-blend-mode: difference;
+  color: var(--bg_color); /* для difference (фон - .button:hover::before) */
 }
 
 .dialog-panel__button-save .save-icon {
   /* display: block; */
   height: 21px;
+  /* Обработка mix-blend-mode: difference для .button:hover::before */
+  /* position: relative; */
+  mix-blend-mode: difference;
+  /* color: var(--bg_color);  */
+  fill: var(--bg_color);
+  /* stroke: var(--bg_color); */
 }
 
 .dialog-save {
@@ -214,12 +316,9 @@
   line-height: 110%;
 }
 
-
 @media (width <= 375px) {
-
   .page {
-    background: url(../images/bg_375w.svg),
-      linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+    --card__image-url: url(../images/bg_375w.svg);
   }
 
   .header {
