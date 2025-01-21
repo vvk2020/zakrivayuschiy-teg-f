@@ -48,11 +48,6 @@
       var(--bg-vertical-grad_top-color) 0.01%,
       var(--bg-vertical-grad_bottom-color) 100%
     );
-  /*background-image: var(
-    --card__image-url
-  ); /* для фона перед отрисовкой градиентов */
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -395,10 +390,6 @@
 }
 
 @media (width <= 375px) {
-  .page {
-    --card__image-url: url(../images/bg_375w.png);
-  }
-
   .header {
     inline-size: 100%; /* необязательно, работает clamp() в .page */
   }

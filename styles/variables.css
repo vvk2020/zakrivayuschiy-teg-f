@@ -26,6 +26,7 @@
   --bg_color: #fff; /* основной цвет */
   --bg-grid_accent-color: #d3d3d3; /* акцентный цвет градиентной сетки */
   --bg-grid_extra-color: transparent; /* дополнительный цвет градиентной сетки */
+  --bg-grid_snap-step: 2px; /* шаг отрисовки градиентной сетки */
   --bg-vertical-grad_top-color: #e7e7e7; /* начальный цвет вертикального градиента фона (верх) */
   --bg-vertical-grad_bottom-color: #1a1a1a; /* конечный цвет вертикального градиента фона (верх) */
 
@@ -36,9 +37,7 @@
   --heart_spark-color: transparent; /*var(--heart_main-body-color); /* искры */
 
   /* Прочее */
-  --card__image-url: url(../images/bg_1440w.png); /* путь к фоновому изображению */
   --card-image_common-filter: drop-shadow(
     0px 10px 10px rgba(0, 0, 0, 0.8)
   ); /* общий фильтр картинок карточек */
-  --bg-grid_snap-step: 2px; /* шаг отрисовки градиентной сетки фона */
 }
