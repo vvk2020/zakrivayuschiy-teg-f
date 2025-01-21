@@ -9,22 +9,26 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 */
 
+/* Сердцебиение */
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+
+/*  */
+@keyframes sparks-ignited {
+  to {
+    --heart_spark-color: var(--heartbeat-color);
+  }
+}
+
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-
-  /* vvk */
-  inline-size: clamp(375px, 48.7%, 700px);
-  /* inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem); */
-
   margin-inline: auto;
-
   font: var(--main-font);
-  /* font-variation-settings: 'wght' var(--card__text_weight); */ /* не нужно, реализовано через --main-font */
-
-  background-image: var(
-    --card__image-url
-  ); /* для фона перед отрисовкой градиентов */
   background: repeating-linear-gradient(
       90deg,
       var(--bg-grid_accent-color) 0,
@@ -44,56 +48,53 @@
       var(--bg-vertical-grad_top-color) 0.01%,
       var(--bg-vertical-grad_bottom-color) 100%
     );
-
+  background-image: var(
+    --card__image-url
+  ); /* для фона перед отрисовкой градиентов */
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; /* для background-image */
-  background-attachment: fixed; /* фон не прокручивается */
+  background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  inline-size: clamp(375px, 48.7%, 700px);
 }
 
 .header {
-  margin-block-start: 100px; /* 100px 370px; */
+  margin-block-start: 100px;
+  border: var(--border-line);
   padding-block: clamp(7.5rem, 0.751vw + 7.324rem, 8rem);
   font: var(--accent-font);
   text-align: center;
   text-transform: uppercase;
   background: var(--bg_color);
-  border: var(--border-line); /*2px solid #000;*/
 }
 
 .header__title {
   padding-block-end: 20px;
   font-weight: var(--card__text_weight);
-  font-size: clamp(
-    3.063rem,
-    1.502vw + 2.71rem,
-    4.063rem
-  ); /* 65px при 1440px, 49px при 375px) */
-  /* border: 1px dashed blue; */
+  font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
+  line-height: 100%; /* для FireFox */
 }
 
 .header__text {
   font-weight: var(--card__text_weight);
-  font-size: clamp(
-    0.875rem,
-    0.845vw + 0.677rem,
-    1.438rem
-  ); /* 23px при 1440px, 14px при 375px) */
-  line-height: 1; /* для FireFox (в Chrome не обязательно), fig: 23px */
+  font-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
+  line-height: 1; /* для FireFox (в Chrome не надо), fig: 23px */
 }
 
 .card-list {
-  padding-block-start: 100px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 50px;
+  padding-block-start: 100px;
 }
 
 .card {
-  background: var(--bg_color);
+  border: var(--border-line);
   font-size: 18px;
-  border: var(--border-line); /*2px solid #000;*/
+  background: var(--bg_color);
 }
 
 .card__title {
@@ -104,17 +105,17 @@
 
 .card__image-wrapper {
   position: relative; /* для позиционирования .card__label */
-  aspect-ratio: 1 / 1; /* для сохранения единообразного отображения карточек, без рывков при загрузке */
-  font-size: 0; /* убираем  автоотступы */
   /* убираем дублирование границ и добавляем недостающиую */
   border: inherit;
   border-inline: none;
+  font-size: 0; /* убираем  автоотступы */
+  aspect-ratio: 1 / 1; /* для устранения рывков сетки при lazy-загрузке картинок */
 }
 
 .card__image {
-  inline-size: 100%;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
   aspect-ratio: 1 / 1;
 }
 
@@ -156,13 +157,12 @@
 
 .card__label {
   position: absolute;
-  right: clamp(0.688rem, 1.315vw + 0.379rem, 1.563rem); /* Pixel Perfect */
   top: clamp(1.438rem, 0.188vw + 1.393rem, 1.563rem); /* Pixel Perfect */
+  right: clamp(0.688rem, 1.315vw + 0.379rem, 1.563rem); /* Pixel Perfect */
   font: var(--accent-font);
   font-size: 14px;
-  /* text-transform: uppercase; */
-  mix-blend-mode: hard-light;
   text-shadow: 0 0 3px var(--card__label_shadow-color);
+  mix-blend-mode: hard-light;
 }
 
 .card__text {
@@ -170,7 +170,6 @@
 }
 
 .card__board {
-  /* padding-inline: 25px; */
   padding: 25px;
 }
 
@@ -181,32 +180,117 @@
 .button-panel {
   display: flex;
   justify-content: end;
-  block-size: 38px;
-  margin-block-start: 25px;
+  align-items: center;
   gap: 6px;
+  margin-block-start: 25px;
+  min-block-size: 38px;
 }
 
 .card__icon-button {
-  padding: 3px 0 0; /* Pixel Perfect */
-  /* place-items: center; */
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  outline-offset: -2px; /* Pixel Perfect для height как у .card__like-button */
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
-  /* outline: none; */
-  outline: 2px solid var(--accent-color);
+  outline-color: transparent;
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color);
-  transition: all 0.3s ease;
+  outline: var(--border-line);
+  transition: outline 0.3s ease;
 }
+
+/* АНИМАЦИИ */
+
+/* initial */
+
+.core {
+  transition: fill 0.3s 0.03s;
+}
+
+.main-body {
+  transition: fill 0.3s;
+}
+
+.like-icon {
+  margin-block-start: 2px; /* Pixel Perfect */
+}
+
+.like-icon .contour {
+  transition: fill 0.1s linear;
+}
+
+/* :hover */
+
+.card__icon-button:hover .core {
+  --heart_core-color: var(--heart_contour-color);
+  transition: fill 0.3s;
+}
+
+.card__icon-button:hover .main-body {
+  --heart_main-body-color: var(--heart_contour-color);
+  transition: fill 0.3s 0.05s;
+}
+
+/* :active */
+
+.card__icon-button:active .core {
+  --heart_core-color: var(--heartbeat-color);
+  transition: fill 0.3s;
+}
+
+.card__icon-button:active .main-body {
+  --heart_main-body-color: var(--heartbeat-color);
+  transition: fill 0.3s 0.05s;
+}
+
+/* onclick (.like-icon.is-liked) */
+
+.like-icon.is-liked .core {
+  --heart_core-color: var(--heartbeat-color);
+  transition: fill 0.3s;
+}
+
+.like-icon.is-liked .main-body {
+  --heart_main-body-color: var(--heartbeat-color);
+  transition: fill 0.3s 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  --heart_contour-color: var(--heartbeat-color);
+  transition: fill 0.3s 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation-name: heartbeat;
+  animation-delay: 0.1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+.like-icon.is-liked .sparks {
+  transform-origin: center;
+  animation-name: sparks-ignited;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+/************/
 
 .button {
   position: relative; /* для позиционирования ::before */
-  border: var(--border-line); /*2px solid #000;*/
+  border: var(--border-line);
+  font: var(--accent-font); /* для корректных padding caption кнопки */
   background: transparent;
-  font: var(--accent-font); /* для корректных padding имени кнопки */
+  cursor: pointer;
 }
 
 .button:focus {
@@ -216,25 +300,28 @@
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
   transition: box-shadow 0.3s ease;
-  /* filter: drop-shadow(2px 2px 0px red); */
 }
 
 .button::before {
   content: "";
   position: absolute;
   inset: 0;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left; /* старт трансформации - слева */
-  transition: transform 0.5s ease-in-out;
-  background-color: var(--accent-color);
 }
 
 .button:hover::before {
-  transform: scaleX(1); /* translateX(-50%); */
   transition: transform 0.5s ease-in-out;
+  transform: scaleX(1);
 }
 
 .card__like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 10.5px; /* Pixel Perfect */
   inline-size: 130px;
 }
 
@@ -246,43 +333,36 @@
 /* ДИАЛОГ СОХРАНЕНИЯ И ПАНЕЛЬ ЕГО ВЫЗОВА */
 
 .dialog-panel {
-  background-color: var(--bg_color);
   padding-block: 50px 100px;
+  background-color: var(--bg_color);
 }
 
 .dialog-panel__button-save {
   display: flex;
-  margin-inline: auto;
   align-items: center;
   gap: 8px;
+  margin-inline: auto;
   padding: 15px 20px;
 }
 
 .button__text {
-  /* position: relative; */
+  color: var(--bg_color); /* для difference (фон - .button:hover::before) */
   font: var(--accent-font);
   line-height: 90%;
   mix-blend-mode: difference;
-  color: var(--bg_color); /* для difference (фон - .button:hover::before) */
 }
 
 .dialog-panel__button-save .save-icon {
-  /* display: block; */
   height: 21px;
-  /* Обработка mix-blend-mode: difference для .button:hover::before */
-  /* position: relative; */
-  mix-blend-mode: difference;
-  /* color: var(--bg_color);  */
   fill: var(--bg_color);
-  /* stroke: var(--bg_color); */
+  /* Обработка mix-blend-mode: difference для .button:hover::before */
+  mix-blend-mode: difference;
 }
 
 .dialog-save {
-  margin-top: 100px; /* ВРЕМЕННО */
-  inline-size: 357px;
-  padding: 30px;
-  /* padding: 30px 30px 29px; /* 30px => Pixel Perfect */
   border: var(--border-line);
+  padding: 30px;
+  inline-size: 357px;
 }
 
 .dialog-save::backdrop {
@@ -297,23 +377,22 @@
 }
 
 .dialog__intro .save-icon {
-  block-size: 40px; /* height: 40px; */
   flex-shrink: 0;
+  block-size: 40px;
 }
 
 .dialog-text {
   font: var(--accent-font);
-  text-transform: uppercase;
   line-height: 150%;
+  text-transform: uppercase;
 }
 
 .dialog-save__button-close {
   margin-block-start: 30px;
-  /* justify-content: start; */
-  inline-size: 100%;
   padding-block: 9px; /* 12.5px => Pixel Perfect */
   font: var(--accent-font);
   line-height: 110%;
+  inline-size: 100%;
 }
 
 @media (width <= 375px) {
@@ -344,8 +423,8 @@
   }
 
   .dialog-save {
-    inline-size: 341px;
     padding-inline: 40px;
+    inline-size: 341px;
   }
 }
 
@@ -354,8 +433,8 @@
     (-webkit-text-stroke: 1px var(--card__label_shadow-color))
 ) {
   .card__label {
-    -webkit-text-stroke: 1px var(--card__label_shadow-color);
-    text-stroke: 1px var(--card__label_shadow-color); /* не поддерживается Chrome */
     text-shadow: none;
+    -webkit-text-stroke: 1px var(--card__label_shadow-color);
+    text-stroke: 1px var(--card__label_shadow-color); /* Chrome не поддерживает */
   }
 }

@@ -3,6 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ПОддержка социальных сетей -->
+    <meta
+      name="description"
+      content="Страница о взгляде на путь обучения Frontend-разработке в Яндекс ПРактикум с высоты трех спринтов." />
+    <meta property="og:title" content="Закрывающий тег" />
+    <meta
+      property="og:description"
+      content="Страница о взгляде на путь обучения Frontend-разработке в Яндекс ПРактикум с высоты трех спринтов." />
+    <meta
+      property="og:url"
+      content="https://vvk2020.github.io/zakrivayuschiy-teg-f/" />
+    <meta property="og:image" content="./images/confucius_696w.webp" />
+    <meta property="twitter:card" content="summary_large_image" />
     <title>Закрывающий тег</title>
     <!-- fonts -->
     <link rel="stylesheet" href="./fonts/fonts.css" />
@@ -31,10 +44,6 @@
               Фритрек и нулевой спринт: Подготовка к работе
             </h3>
             <div class="card__image-wrapper">
-              <!-- <img
-                src="./images/std/1-html.png"
-                alt="Первая картинка"
-                class="card__image" /> -->
               <img
                 srcset="
                   ./images/confucius_375w.webp 375w,
@@ -53,12 +62,15 @@
                   проникнуться основами и настроиться на учёбу. И, возможно,
                   подумать, как новые знания могут повлиять на ваше будущее.
                 </p>
-                <p>Место для ваших воспоминаний о начале обучения.</p>
+                <p>
+                  Три пути ведут к знанию: путь размышления – это путь самый
+                  благородный, путь подражания – это путь самый лёгкий и путь
+                  опыта – это путь самый горький | Конфуций
+                </p>
               </div>
 
               <div class="button-panel">
                 <button class="card__icon-button">
-                  <!-- <img src="" alt="Иконка" class="card__image" /> -->
                   <svg
                     class="like-icon"
                     width="39"
@@ -66,29 +78,31 @@
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_0_1575)">
-                      <path
-                        class="core"
-                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                        fill="black" />
+                    <g class="heart">
+                      <!-- для скринридеров -->
+                      <title>Кнопка в виде сердца</title>
+                      <desc>
+                        Нажми на кнопку, получишь результат и твоя мечта
+                        осуществится
+                      </desc>
                       <path
                         class="contour"
-                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
-                        fill="#FF0000" />
+                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                        fill="var(--heart_contour-color)" />
                       <path
                         class="main-body"
-                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
-                        fill="white" />
+                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                        fill="var(--heart_main-body-color)" />
                       <path
-                        class="sparks"
-                        d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                        fill="#FF0000" />
+                        class="core"
+                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                        fill="var(--heart_core-color)" />
                     </g>
-                    <!-- <defs>
-                      <clipPath id="clip0_0_1575">
-                        <rect width="39" height="36" fill="white" />
-                      </clipPath>
-                    </defs> -->
+
+                    <path
+                      class="sparks"
+                      d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                      fill="var(--heart_spark-color)" />
                   </svg>
                 </button>
 
@@ -98,14 +112,11 @@
               </div>
             </div>
           </li>
+
           <!-- 2-я карточка -->
           <li class="card">
             <h3 class="card__title">1 спринт: Я — чистый лист</h3>
             <div class="card__image-wrapper">
-              <!-- <img
-                src="./images/std/2-html.png"
-                alt="Первая картинка"
-                class="card__image" /> -->
               <img
                 srcset="
                   ./images/cicero_375w.webp 375w,
@@ -114,7 +125,8 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/cicero_696w.webp"
                 alt="Марк Туллий Цицерон - римский государственный деятель, оратор, философ и учёный"
-                class="card__image image-cicero" />
+                class="card__image image-cicero"
+                loading="lazy" />
               <span class="card__label" aria-hidden="true">&lt;/HTML&gt;</span>
             </div>
             <div class="card__board">
@@ -127,12 +139,11 @@
                   вопросы: с чего начать? а вдруг будет слишком сложно? что,
                   если я не справлюсь?
                 </p>
-                <p>Место для ваших воспоминаний о начале первого спринта.</p>
+                <p>Через сомнения приходим к истине | Цицерон</p>
               </div>
 
               <div class="button-panel">
                 <button class="card__icon-button">
-                  <!-- <img src="" alt="Иконка" class="card__image" /> -->
                   <svg
                     class="like-icon"
                     width="39"
@@ -140,29 +151,31 @@
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_0_1575)">
-                      <path
-                        class="core"
-                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                        fill="black" />
+                    <g class="heart">
+                      <!-- для скринридеров -->
+                      <title>Кнопка в виде сердца</title>
+                      <desc>
+                        Нажми на кнопку, получишь результат и твоя мечта
+                        осуществится
+                      </desc>
                       <path
                         class="contour"
-                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
-                        fill="#FF0000" />
+                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                        fill="var(--heart_contour-color)" />
                       <path
                         class="main-body"
-                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
-                        fill="white" />
+                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                        fill="var(--heart_main-body-color)" />
                       <path
-                        class="sparks"
-                        d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                        fill="#FF0000" />
+                        class="core"
+                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                        fill="var(--heart_core-color)" />
                     </g>
-                    <!-- <defs>
-                      <clipPath id="clip0_0_1575">
-                        <rect width="39" height="36" fill="white" />
-                      </clipPath>
-                    </defs> -->
+
+                    <path
+                      class="sparks"
+                      d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                      fill="var(--heart_spark-color)" />
                   </svg>
                 </button>
 
@@ -172,14 +185,11 @@
               </div>
             </div>
           </li>
+
           <!-- 3-я карточка -->
           <li class="card">
             <h3 class="card__title">1 спринт: А если не получится?</h3>
             <div class="card__image-wrapper">
-              <!-- <img
-                src="./images/std/3-css.png"
-                alt="Первая картинка"
-                class="card__image" /> -->
               <img
                 srcset="
                   ./images/sakura_375w.webp 375w,
@@ -188,7 +198,8 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/sakura_696w.webp"
                 alt="Цветение сакуры - символ облаков и эфемерности жизни"
-                class="card__image image-sakura" />
+                class="card__image image-sakura"
+                loading="lazy" />
               <span class="card__label" aria-hidden="true">&lt;CSS&gt;</span>
             </div>
             <div class="card__board">
@@ -199,14 +210,11 @@
                   Или вы, наоборот, могли вдохновиться успехами и поверить в
                   себя.
                 </p>
-                <p>
-                  Место для ваших воспоминаний об окончании первого спринта.
-                </p>
+                <p>Упади семь раз и восемь раз поднимись | Японская мудрость</p>
               </div>
 
               <div class="button-panel">
                 <button class="card__icon-button">
-                  <!-- <img src="" alt="Иконка" class="card__image" /> -->
                   <svg
                     class="like-icon"
                     width="39"
@@ -214,29 +222,31 @@
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_0_1575)">
-                      <path
-                        class="core"
-                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                        fill="black" />
+                    <g class="heart">
+                      <!-- для скринридеров -->
+                      <title>Кнопка в виде сердца</title>
+                      <desc>
+                        Нажми на кнопку, получишь результат и твоя мечта
+                        осуществится
+                      </desc>
                       <path
                         class="contour"
-                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
-                        fill="#FF0000" />
+                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                        fill="var(--heart_contour-color)" />
                       <path
                         class="main-body"
-                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
-                        fill="white" />
+                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                        fill="var(--heart_main-body-color)" />
                       <path
-                        class="sparks"
-                        d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                        fill="#FF0000" />
+                        class="core"
+                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                        fill="var(--heart_core-color)" />
                     </g>
-                    <!-- <defs>
-                      <clipPath id="clip0_0_1575">
-                        <rect width="39" height="36" fill="white" />
-                      </clipPath>
-                    </defs> -->
+
+                    <path
+                      class="sparks"
+                      d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                      fill="var(--heart_spark-color)" />
                   </svg>
                 </button>
 
@@ -246,14 +256,11 @@
               </div>
             </div>
           </li>
+
           <!-- 4-я карточка -->
           <li class="card">
             <h3 class="card__title">2 спринт: Погоня за идеалом</h3>
             <div class="card__image-wrapper">
-              <!-- <img
-                src="./images/std/4-desigions.png"
-                alt="Первая картинка"
-                class="card__image" /> -->
               <img
                 srcset="
                   ./images/iskander_375w.webp 375w,
@@ -262,8 +269,11 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/iskander_696w.webp"
                 alt="Фазиль Искандер - русский прозаик, журналист, поэт, сценарист и общественный деятель"
-                class="card__image image-iskander" />
-              <span class="card__label" aria-hidden="true">&lt;desigions&gt;</span>
+                class="card__image image-iskander"
+                loading="lazy" />
+              <span class="card__label" aria-hidden="true">
+                &lt;desigions&gt;
+              </span>
             </div>
             <div class="card__board">
               <div class="card__text">
@@ -274,12 +284,14 @@
                   вовсе и не подвержены перфекционизму и вместо того, чтобы
                   сделать идеально, старались просто сделать.
                 </p>
-                <p>Место для ваших воспоминаний о начале второго спринта.</p>
+                <p>
+                  Идеал невозможен. Но возможны правильные шаги к идеалу. Шаг к
+                  идеалу и есть идеал | Фазиль Искандер
+                </p>
               </div>
 
               <div class="button-panel">
                 <button class="card__icon-button">
-                  <!-- <img src="" alt="Иконка" class="card__image" /> -->
                   <svg
                     class="like-icon"
                     width="39"
@@ -287,29 +299,31 @@
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_0_1575)">
-                      <path
-                        class="core"
-                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                        fill="black" />
+                    <g class="heart">
+                      <!-- для скринридеров -->
+                      <title>Кнопка в виде сердца</title>
+                      <desc>
+                        Нажми на кнопку, получишь результат и твоя мечта
+                        осуществится
+                      </desc>
                       <path
                         class="contour"
-                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
-                        fill="#FF0000" />
+                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                        fill="var(--heart_contour-color)" />
                       <path
                         class="main-body"
-                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
-                        fill="white" />
+                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                        fill="var(--heart_main-body-color)" />
                       <path
-                        class="sparks"
-                        d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                        fill="#FF0000" />
+                        class="core"
+                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                        fill="var(--heart_core-color)" />
                     </g>
-                    <!-- <defs>
-                                <clipPath id="clip0_0_1575">
-                                  <rect width="39" height="36" fill="white" />
-                                </clipPath>
-                              </defs> -->
+
+                    <path
+                      class="sparks"
+                      d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                      fill="var(--heart_spark-color)" />
                   </svg>
                 </button>
 
@@ -319,14 +333,11 @@
               </div>
             </div>
           </li>
+
           <!-- 5-я карточка -->
           <li class="card">
             <h3 class="card__title">2 спринт: О тех, кто рядом</h3>
             <div class="card__image-wrapper">
-              <!-- <img
-                src="./images/std/5-care.png"
-                alt="Первая картинка"
-                class="card__image" /> -->
               <img
                 srcset="
                   ./images/ford_375w.webp 375w,
@@ -335,7 +346,8 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/ford_696w.webp"
                 alt="Генри Форд - американский изобретатель и автопромышленник"
-                class="card__image image-ford" />
+                class="card__image image-ford"
+                loading="lazy" />
               <span class="card__label" aria-hidden="true">care</span>
             </div>
             <div class="card__board">
@@ -349,13 +361,13 @@
                   единомышленники, не правда ли?
                 </p>
                 <p>
-                  Место для ваших воспоминаний об окончании второго спринта.
+                  Когда все двигаются вперёд совместными усилиями, успех
+                  приходит сам собой | Генри Форд
                 </p>
               </div>
 
               <div class="button-panel">
                 <button class="card__icon-button">
-                  <!-- <img src="" alt="Иконка" class="card__image" /> -->
                   <svg
                     class="like-icon"
                     width="39"
@@ -363,29 +375,31 @@
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_0_1575)">
-                      <path
-                        class="core"
-                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                        fill="black" />
+                    <g class="heart">
+                      <!-- для скринридеров -->
+                      <title>Кнопка в виде сердца</title>
+                      <desc>
+                        Нажми на кнопку, получишь результат и твоя мечта
+                        осуществится
+                      </desc>
                       <path
                         class="contour"
-                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
-                        fill="#FF0000" />
+                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                        fill="var(--heart_contour-color)" />
                       <path
                         class="main-body"
-                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
-                        fill="white" />
+                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                        fill="var(--heart_main-body-color)" />
                       <path
-                        class="sparks"
-                        d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                        fill="#FF0000" />
+                        class="core"
+                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                        fill="var(--heart_core-color)" />
                     </g>
-                    <!-- <defs>
-                              <clipPath id="clip0_0_1575">
-                                <rect width="39" height="36" fill="white" />
-                              </clipPath>
-                            </defs> -->
+
+                    <path
+                      class="sparks"
+                      d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                      fill="var(--heart_spark-color)" />
                   </svg>
                 </button>
 
@@ -395,19 +409,11 @@
               </div>
             </div>
           </li>
+
           <!-- 6-я карточка -->
           <li class="card">
             <h3 class="card__title">3 спринт: Обходные стратегии</h3>
             <div class="card__image-wrapper">
-              <!-- <img
-                src="./images/std/6-support.png"
-                alt="Первая картинка"
-                class="card__image" /> -->
-              <!-- src="./images/tolstoy.webp" -->
-              <!-- <img
-                src="./images/tolstoy.webp"
-                alt="Первая картинка"
-                class="card__image" /> -->
               <img
                 srcset="
                   ./images/tolstoy_375w.webp 375w,
@@ -416,8 +422,11 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/tolstoy_696w.webp"
                 alt="Лев Толстой - русский писатель и мыслитель"
-                class="card__image image-tolstoy" />
-              <span class="card__label" aria-hidden="true">&lt;support&gt;</span>
+                class="card__image image-tolstoy"
+                loading="lazy" />
+              <span class="card__label" aria-hidden="true">
+                &lt;support&gt;
+              </span>
             </div>
             <div class="card__board">
               <div class="card__text">
@@ -426,12 +435,11 @@
                   момент вам могло показаться, что решения просто иссякли.
                   Значит, пришло время посмотреть на задачу под другим углом.
                 </p>
-                <p>Место для ваших воспоминаний о начале третьего спринта.</p>
+                <p>Все приходит к тому, кто умеет ждать | Лев Толстой</p>
               </div>
 
               <div class="button-panel">
                 <button class="card__icon-button">
-                  <!-- <img src="" alt="Иконка" class="card__image" /> -->
                   <svg
                     class="like-icon"
                     width="39"
@@ -439,29 +447,31 @@
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_0_1575)">
-                      <path
-                        class="core"
-                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                        fill="black" />
+                    <g class="heart">
+                      <!-- для скринридеров -->
+                      <title>Кнопка в виде сердца</title>
+                      <desc>
+                        Нажми на кнопку, получишь результат и твоя мечта
+                        осуществится
+                      </desc>
                       <path
                         class="contour"
-                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
-                        fill="#FF0000" />
+                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                        fill="var(--heart_contour-color)" />
                       <path
                         class="main-body"
-                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
-                        fill="white" />
+                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                        fill="var(--heart_main-body-color)" />
                       <path
-                        class="sparks"
-                        d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                        fill="#FF0000" />
+                        class="core"
+                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                        fill="var(--heart_core-color)" />
                     </g>
-                    <!-- <defs>
-                            <clipPath id="clip0_0_1575">
-                              <rect width="39" height="36" fill="white" />
-                            </clipPath>
-                          </defs> -->
+
+                    <path
+                      class="sparks"
+                      d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                      fill="var(--heart_spark-color)" />
                   </svg>
                 </button>
 
@@ -471,14 +481,11 @@
               </div>
             </div>
           </li>
+
           <!-- 7-я карточка -->
           <li class="card">
             <h3 class="card__title">3 спринт: Когда опускаются руки</h3>
             <div class="card__image-wrapper">
-              <!-- <img
-                src="./images/std/7-life-style.png"
-                alt="Первая картинка"
-                class="card__image" /> -->
               <img
                 srcset="
                   ./images/valery_375w.webp 375w,
@@ -487,8 +494,11 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/valery_696w.webp"
                 alt="Поль Валери - французский поэт, эссеист и философ"
-                class="card__image image-valery" />
-              <span class="card__label" aria-hidden="true">&lt;lifes-style: none;&gt;</span>
+                class="card__image image-valery"
+                loading="lazy" />
+              <span class="card__label" aria-hidden="true">
+                &lt;lifes-style: none;&gt;
+              </span>
             </div>
             <div class="card__board">
               <div class="card__text">
@@ -500,13 +510,13 @@
                   Вспомните, откуда вы её черпали.
                 </p>
                 <p>
-                  Место для ваших воспоминаний об окончании третьего спринта.
+                  Когда достигаешь цели, понимаешь, что путь и был целью | Поль
+                  Валери
                 </p>
               </div>
 
               <div class="button-panel">
                 <button class="card__icon-button">
-                  <!-- <img src="" alt="Иконка" class="card__image" /> -->
                   <svg
                     class="like-icon"
                     width="39"
@@ -514,29 +524,31 @@
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_0_1575)">
-                      <path
-                        class="core"
-                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                        fill="black" />
+                    <g class="heart">
+                      <!-- для скринридеров -->
+                      <title>Кнопка в виде сердца</title>
+                      <desc>
+                        Нажми на кнопку, получишь результат и твоя мечта
+                        осуществится
+                      </desc>
                       <path
                         class="contour"
-                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
-                        fill="#FF0000" />
+                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                        fill="var(--heart_contour-color)" />
                       <path
                         class="main-body"
-                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
-                        fill="white" />
+                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                        fill="var(--heart_main-body-color)" />
                       <path
-                        class="sparks"
-                        d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                        fill="#FF0000" />
+                        class="core"
+                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                        fill="var(--heart_core-color)" />
                     </g>
-                    <!-- <defs>
-                                      <clipPath id="clip0_0_1575">
-                                        <rect width="39" height="36" fill="white" />
-                                      </clipPath>
-                                    </defs> -->
+
+                    <path
+                      class="sparks"
+                      d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                      fill="var(--heart_spark-color)" />
                   </svg>
                 </button>
 
@@ -546,14 +558,11 @@
               </div>
             </div>
           </li>
+
           <!-- 8-я карточка -->
           <li class="card">
             <h3 class="card__title">«Сейчас я здесь»</h3>
             <div class="card__image-wrapper">
-              <!-- <img
-                src="./images/std/8-experience.png"
-                alt="Первая картинка"
-                class="card__image" /> -->
               <img
                 srcset="
                   ./images/zola_375w.webp 375w,
@@ -562,8 +571,11 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/zola_696w.webp"
                 alt="Эмиль Золя - французский писатель, драматург и публицист"
-                class="card__image image-zola" />
-              <span class="card__label" aria-hidden="true">&lt;experience&gt;</span>
+                class="card__image image-zola"
+                loading="lazy" />
+              <span class="card__label" aria-hidden="true">
+                &lt;experience&gt;
+              </span>
             </div>
             <div class="card__board">
               <div class="card__text">
@@ -577,14 +589,13 @@
                   есть результат.
                 </p>
                 <p>
-                  Место, чтобы остановиться, подумать и написать, что вы
-                  чувствуете в этой точке пути.
+                  Единственное счастье в жизни – это постоянное стремление
+                  вперед | Эмиль Золя
                 </p>
               </div>
 
               <div class="button-panel">
                 <button class="card__icon-button">
-                  <!-- <img src="" alt="Иконка" class="card__image" /> -->
                   <svg
                     class="like-icon"
                     width="39"
@@ -592,29 +603,31 @@
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_0_1575)">
-                      <path
-                        class="core"
-                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                        fill="black" />
+                    <g class="heart">
+                      <!-- для скринридеров -->
+                      <title>Кнопка в виде сердца</title>
+                      <desc>
+                        Нажми на кнопку, получишь результат и твоя мечта
+                        осуществится
+                      </desc>
                       <path
                         class="contour"
-                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
-                        fill="#FF0000" />
+                        d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                        fill="var(--heart_contour-color)" />
                       <path
                         class="main-body"
-                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
-                        fill="white" />
+                        d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                        fill="var(--heart_main-body-color)" />
                       <path
-                        class="sparks"
-                        d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                        fill="#FF0000" />
+                        class="core"
+                        d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                        fill="var(--heart_core-color)" />
                     </g>
-                    <!-- <defs>
-                                      <clipPath id="clip0_0_1575">
-                                        <rect width="39" height="36" fill="white" />
-                                      </clipPath>
-                                    </defs> -->
+
+                    <path
+                      class="sparks"
+                      d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                      fill="var(--heart_spark-color)" />
                   </svg>
                 </button>
 
@@ -626,12 +639,13 @@
           </li>
         </ul>
       </section>
+
       <!-- Секция диалога сохранения и его вызова -->
       <section class="dialog-panel">
         <button
           class="button dialog-panel__button-save"
           type="button"
-          onclick="window.SaveDialog.show()">
+          onclick="window.SaveDialog.showModal()">
           <svg viewBox="0 0 40 40" class="save-icon" aria-hidden="true">
             <use href="./svg/floppy.svg#fdd" />
           </svg>
