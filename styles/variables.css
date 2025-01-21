@@ -36,7 +36,7 @@
   --heart_spark-color: transparent; /*var(--heart_main-body-color); /* искры */
 
   /* Прочее */
-  --card__image-url: url(../images/bg_1440w.png), url(../images/bg_375w.png); /* путь к фоновому изображению */
+  --card__image-url: url(../images/bg_1440w.png); /* путь к фоновому изображению */
   --card-image_common-filter: drop-shadow(
     0px 10px 10px rgba(0, 0, 0, 0.8)
   ); /* общий фильтр картинок карточек */
