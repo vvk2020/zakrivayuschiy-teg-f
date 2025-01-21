@@ -48,7 +48,7 @@
       var(--bg-vertical-grad_top-color) 0.01%,
       var(--bg-vertical-grad_bottom-color) 100%
     );
-  background-image: var(
+  /*background-image: var(
     --card__image-url
   ); /* для фона перед отрисовкой градиентов */
   background-repeat: no-repeat;
