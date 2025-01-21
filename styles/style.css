@@ -190,8 +190,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
   padding: 0;
   outline-offset: -2px; /* Pixel Perfect для height как у .card__like-button */
+  background: transparent;
   cursor: pointer;
 }
 
@@ -323,11 +325,6 @@
   align-items: center;
   padding-block: 10.5px; /* Pixel Perfect */
   inline-size: 130px;
-}
-
-.card__icon-button {
-  border: none;
-  background: transparent;
 }
 
 /* ДИАЛОГ СОХРАНЕНИЯ И ПАНЕЛЬ ЕГО ВЫЗОВА */
