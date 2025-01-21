@@ -5,7 +5,7 @@
   /* Типографика */
   --card__title_weight: 700; /* вес шрифта заголовка карточки */
   --card__text_weight: 400; /* вес шрифта текста карточки */
-  --main-font: var(--card__text_weight) 18px "Inter Regular", sans-serif; /* основной шрифт */
+  --main-font: var(--card__text_weight) 18px "Inter", sans-serif; /* основной шрифт */
   --accent-font: var(--card__text_weight) 14px "Press Start 2P", sans-serif; /* акцентный шрифт */
 
   /* Палитра цветов */
@@ -32,11 +32,11 @@
   /* Цвета svg-элементов кнопки в вид сердца с искрами (.like-icon) */
   --heart_contour-color: var(--accent-color); /* контур */
   --heart_main-body-color: transparent; /*#ff0000; /* основное тело */
-  --heart_core-color: transparent; /* сердцевина */ /* УДАЛИТЬ???? */
+  --heart_core-color: transparent; /* сердцевина */
   --heart_spark-color: transparent; /*var(--heart_main-body-color); /* искры */
 
   /* Прочее */
-  --card__image-url: url(../images/bg_1440w.avif), url(../images/bg_375w.avif); /* путь к фоновому изображению */
+  --card__image-url: url(../images/bg_1440w.png), url(../images/bg_375w.png); /* путь к фоновому изображению */
   --card-image_common-filter: drop-shadow(
     0px 10px 10px rgba(0, 0, 0, 0.8)
   ); /* общий фильтр картинок карточек */

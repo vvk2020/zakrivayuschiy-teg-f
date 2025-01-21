@@ -396,7 +396,7 @@
 
 @media (width <= 375px) {
   .page {
-    --card__image-url: url(../images/bg_375w.avif);
+    --card__image-url: url(../images/bg_375w.png);
   }
 
   .header {
