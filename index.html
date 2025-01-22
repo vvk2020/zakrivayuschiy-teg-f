@@ -26,6 +26,7 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
@@ -40,9 +41,9 @@
         <ul class="card-list">
           <!-- 1-я карточка -->
           <li class="card">
-            <h3 class="card__title">
+            <h2 class="card__title">
               Фритрек и нулевой спринт: Подготовка к работе
-            </h3>
+            </h2>
             <div class="card__image-wrapper">
               <img
                 srcset="
@@ -52,7 +53,7 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/confucius_696w.webp"
                 alt="Конфуций - древний мыслитель и философ Китая"
-                class="card__image image-confucius" />
+                class="card__image filter-saturate" />
               <span class="card__label" aria-hidden="true">&lt;/HTML&gt;</span>
             </div>
             <div class="card__board">
@@ -70,7 +71,10 @@
               </div>
 
               <div class="button-panel">
-                <button class="card__icon-button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-hidden="true">
                   <svg
                     class="like-icon"
                     width="39"
@@ -106,7 +110,7 @@
                   </svg>
                 </button>
 
-                <button class="button card__like-button">
+                <button class="button card__like-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -115,7 +119,7 @@
 
           <!-- 2-я карточка -->
           <li class="card">
-            <h3 class="card__title">1 спринт: Я — чистый лист</h3>
+            <h2 class="card__title">1 спринт: Я — чистый лист</h2>
             <div class="card__image-wrapper">
               <img
                 srcset="
@@ -125,7 +129,7 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/cicero_696w.webp"
                 alt="Марк Туллий Цицерон - римский государственный деятель, оратор, философ и учёный"
-                class="card__image image-cicero"
+                class="card__image filter-contrast-brightness"
                 loading="lazy" />
               <span class="card__label" aria-hidden="true">&lt;/HTML&gt;</span>
             </div>
@@ -143,7 +147,10 @@
               </div>
 
               <div class="button-panel">
-                <button class="card__icon-button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-hidden="true">
                   <svg
                     class="like-icon"
                     width="39"
@@ -179,7 +186,7 @@
                   </svg>
                 </button>
 
-                <button class="button card__like-button">
+                <button class="button card__like-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -188,7 +195,7 @@
 
           <!-- 3-я карточка -->
           <li class="card">
-            <h3 class="card__title">1 спринт: А если не получится?</h3>
+            <h2 class="card__title">1 спринт: А если не получится?</h2>
             <div class="card__image-wrapper">
               <img
                 srcset="
@@ -198,7 +205,7 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/sakura_696w.webp"
                 alt="Цветение сакуры - символ облаков и эфемерности жизни"
-                class="card__image image-sakura"
+                class="card__image filter-blur-saturate"
                 loading="lazy" />
               <span class="card__label" aria-hidden="true">&lt;CSS&gt;</span>
             </div>
@@ -214,7 +221,10 @@
               </div>
 
               <div class="button-panel">
-                <button class="card__icon-button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-hidden="true">
                   <svg
                     class="like-icon"
                     width="39"
@@ -250,7 +260,7 @@
                   </svg>
                 </button>
 
-                <button class="button card__like-button">
+                <button class="button card__like-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -259,7 +269,7 @@
 
           <!-- 4-я карточка -->
           <li class="card">
-            <h3 class="card__title">2 спринт: Погоня за идеалом</h3>
+            <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
             <div class="card__image-wrapper">
               <img
                 srcset="
@@ -269,7 +279,7 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/iskander_696w.webp"
                 alt="Фазиль Искандер - русский прозаик, журналист, поэт, сценарист и общественный деятель"
-                class="card__image image-iskander"
+                class="card__image filter-sepia"
                 loading="lazy" />
               <span class="card__label" aria-hidden="true">
                 &lt;desigions&gt;
@@ -291,7 +301,10 @@
               </div>
 
               <div class="button-panel">
-                <button class="card__icon-button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-hidden="true">
                   <svg
                     class="like-icon"
                     width="39"
@@ -327,7 +340,7 @@
                   </svg>
                 </button>
 
-                <button class="button card__like-button">
+                <button class="button card__like-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -336,7 +349,7 @@
 
           <!-- 5-я карточка -->
           <li class="card">
-            <h3 class="card__title">2 спринт: О тех, кто рядом</h3>
+            <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
             <div class="card__image-wrapper">
               <img
                 srcset="
@@ -346,7 +359,7 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/ford_696w.webp"
                 alt="Генри Форд - американский изобретатель и автопромышленник"
-                class="card__image image-ford"
+                class="card__image filter-grayscale"
                 loading="lazy" />
               <span class="card__label" aria-hidden="true">care</span>
             </div>
@@ -367,7 +380,10 @@
               </div>
 
               <div class="button-panel">
-                <button class="card__icon-button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-hidden="true">
                   <svg
                     class="like-icon"
                     width="39"
@@ -403,7 +419,7 @@
                   </svg>
                 </button>
 
-                <button class="button card__like-button">
+                <button class="button card__like-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -412,7 +428,7 @@
 
           <!-- 6-я карточка -->
           <li class="card">
-            <h3 class="card__title">3 спринт: Обходные стратегии</h3>
+            <h2 class="card__title">3 спринт: Обходные стратегии</h2>
             <div class="card__image-wrapper">
               <img
                 srcset="
@@ -422,7 +438,7 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/tolstoy_696w.webp"
                 alt="Лев Толстой - русский писатель и мыслитель"
-                class="card__image image-tolstoy"
+                class="card__image filter-hue-rotate"
                 loading="lazy" />
               <span class="card__label" aria-hidden="true">
                 &lt;support&gt;
@@ -439,7 +455,10 @@
               </div>
 
               <div class="button-panel">
-                <button class="card__icon-button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-hidden="true">
                   <svg
                     class="like-icon"
                     width="39"
@@ -475,7 +494,7 @@
                   </svg>
                 </button>
 
-                <button class="button card__like-button">
+                <button class="button card__like-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -484,7 +503,7 @@
 
           <!-- 7-я карточка -->
           <li class="card">
-            <h3 class="card__title">3 спринт: Когда опускаются руки</h3>
+            <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
             <div class="card__image-wrapper">
               <img
                 srcset="
@@ -494,7 +513,7 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/valery_696w.webp"
                 alt="Поль Валери - французский поэт, эссеист и философ"
-                class="card__image image-valery"
+                class="card__image filter-brightness-sepia"
                 loading="lazy" />
               <span class="card__label" aria-hidden="true">
                 &lt;lifes-style: none;&gt;
@@ -516,7 +535,10 @@
               </div>
 
               <div class="button-panel">
-                <button class="card__icon-button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-hidden="true">
                   <svg
                     class="like-icon"
                     width="39"
@@ -552,7 +574,7 @@
                   </svg>
                 </button>
 
-                <button class="button card__like-button">
+                <button class="button card__like-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -561,7 +583,7 @@
 
           <!-- 8-я карточка -->
           <li class="card">
-            <h3 class="card__title">«Сейчас я здесь»</h3>
+            <h2 class="card__title">«Сейчас я здесь»</h2>
             <div class="card__image-wrapper">
               <img
                 srcset="
@@ -571,7 +593,7 @@
                 sizes="(max-width: 375px) 375px, 696px"
                 src="./images/zola_696w.webp"
                 alt="Эмиль Золя - французский писатель, драматург и публицист"
-                class="card__image image-zola"
+                class="card__image filter-drop-shadow"
                 loading="lazy" />
               <span class="card__label" aria-hidden="true">
                 &lt;experience&gt;
@@ -595,7 +617,10 @@
               </div>
 
               <div class="button-panel">
-                <button class="card__icon-button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-hidden="true">
                   <svg
                     class="like-icon"
                     width="39"
@@ -631,7 +656,7 @@
                   </svg>
                 </button>
 
-                <button class="button card__like-button">
+                <button class="button card__like-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -660,9 +685,9 @@
             <svg viewBox="0 0 40 40" class="save-icon" aria-hidden="true">
               <use href="./svg/floppy.svg#fdd" />
             </svg>
-            <span id="dialog-text" class="dialog-text">
+            <p id="dialog-text" class="dialog-text">
               Вставьте дискету, чтобы продолжить
-            </span>
+            </p>
           </div>
           <button
             class="button dialog-save__button-close"

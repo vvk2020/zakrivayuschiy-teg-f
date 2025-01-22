@@ -9,22 +9,7 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 */
 
-/* Сердцебиение */
-@keyframes heartbeat {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.25);
-  }
-}
-
-/*  */
-@keyframes sparks-ignited {
-  to {
-    --heart_spark-color: var(--heartbeat-color);
-  }
-}
+/* * { outline: 1px dashed red; } */
 
 .page {
   margin-inline: auto;
@@ -51,9 +36,11 @@
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
-  min-block-size: 100dvb;
-  inline-size: clamp(375px, 48.7%, 700px);
+  max-inline-size: 700px;
+  /* min-block-size: 100dvb; */
+  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   font-variation-settings: "wght" 400; /* для github-тестов, уже задан через font: var(--main-font);*/
+  /* display: block; */
 }
 
 .header {
@@ -69,8 +56,9 @@
 .header__title {
   padding-block-end: 20px;
   font-weight: var(--card__text_weight);
-  font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
-  line-height: 100%; /* для FireFox */
+  /* font-size: clamp(3.0625rem, 2.7104rem + 1.5024vw, 4.0625rem); */
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5024vw, 4.0625rem);
+  line-height: 1.0; /* для FireFox */
 }
 
 .header__text {
@@ -118,35 +106,35 @@
 
 /* ФИЛЬТРЫ ИЗОБРАЖЕНИЙ КАРТОЧЕК */
 
-.image-confucius {
+.filter-saturate { /* confucius */
   filter: saturate(120%) var(--card-image_common-filter);
 }
 
-.image-cicero {
+.filter-contrast-brightness { /* cicero */
   filter: contrast(120%) brightness(110%) var(--card-image_common-filter);
 }
 
-.image-sakura {
+.filter-blur-saturate { /* sakura */
   filter: blur(0.01rem) saturate(150%) var(--card-image_common-filter);
 }
 
-.image-iskander {
+.filter-sepia { /* iskander */
   filter: sepia(80%) var(--card-image_common-filter);
 }
 
-.image-ford {
+.filter-grayscale { /* ford */
   filter: grayscale(0.25) var(--card-image_common-filter);
 }
 
-.image-tolstoy {
+.filter-hue-rotate  { /* tolstoy */
   filter: hue-rotate(20deg) var(--card-image_common-filter);
 }
 
-.image-valery {
+.filter-brightness-sepia { /* valery */
   filter: brightness(110%) sepia(80%) var(--card-image_common-filter);
 }
 
-.image-zola {
+.filter-drop-shadow { /* zola */
   filter: var(--card-image_common-filter);
 }
 
@@ -163,7 +151,7 @@
 }
 
 .card__text {
-  text-shadow: 0 0 2px var(--card__text_shadow-color);
+  text-shadow: 1px 1px 2px var(--card__text_shadow-color);
 }
 
 .card__board {
@@ -172,6 +160,10 @@
 
 .card__text p:not(:first-of-type) {
   padding-block-start: 27px;
+}
+
+.card__text p:last-of-type {
+  text-shadow: 1px 1px 2px var(--heartbeat-color);
 }
 
 .button-panel {
@@ -189,8 +181,10 @@
   align-items: center;
   border: none;
   padding: 0;
+  outline: 2px solid transparent;
   outline-offset: -2px; /* Pixel Perfect для height как у .card__like-button */
   background: transparent;
+  transition: outline 0.3s ease;
   cursor: pointer;
 }
 
@@ -200,7 +194,6 @@
 
 .card__icon-button:focus-visible {
   outline: var(--border-line);
-  transition: outline 0.3s ease;
 }
 
 /* АНИМАЦИИ */
@@ -208,11 +201,11 @@
 /* initial */
 
 .core {
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s 0.03s linear;
 }
 
 .main-body {
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon {
@@ -227,41 +220,41 @@
 
 .card__icon-button:hover .core {
   --heart_core-color: var(--heart_contour-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .card__icon-button:hover .main-body {
   --heart_main-body-color: var(--heart_contour-color);
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s 0.05s linear;
 }
 
 /* :active */
 
 .card__icon-button:active .core {
   --heart_core-color: var(--heartbeat-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .card__icon-button:active .main-body {
   --heart_main-body-color: var(--heartbeat-color);
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s 0.05s linear;
 }
 
 /* onclick (.like-icon.is-liked) */
 
 .like-icon.is-liked .core {
   --heart_core-color: var(--heartbeat-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
   --heart_main-body-color: var(--heartbeat-color);
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .contour {
   --heart_contour-color: var(--heartbeat-color);
-  transition: fill 0.3s 0.06s;
+  transition: fill 0.3s 0.06s linear;
 }
 
 .like-icon.is-liked .heart {
@@ -287,8 +280,11 @@
 .button {
   position: relative; /* для позиционирования ::before */
   border: var(--border-line);
+  box-shadow: 2px 2px 0 transparent;
   font: var(--accent-font); /* для корректных padding caption кнопки */
   background: transparent;
+  background-color: var(--bg_color);
+  transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
 
@@ -298,7 +294,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .button::before {
@@ -328,7 +323,6 @@
 
 .dialog-panel {
   padding-block: 50px 100px;
-  background-color: var(--bg_color);
 }
 
 .dialog-panel__button-save {

@@ -9,3 +9,20 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+/* Сердцебиение */
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+
+/*  */
+@keyframes sparks-ignited {
+  to {
+    --heart_spark-color: var(--heartbeat-color);
+  }
+}
