@@ -40,7 +40,6 @@
   /* min-block-size: 100dvb; */
   inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   font-variation-settings: "wght" 400; /* для github-тестов, уже задан через font: var(--main-font);*/
-  /* display: block; */
 }
 
 .header {
