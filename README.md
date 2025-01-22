@@ -1,1 +1,1 @@
-https://vvk2020.github.io/zakrivayuschiy-teg-f/
+https://github.com/vvk2020/zakrivayuschiy-teg-f
