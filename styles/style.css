@@ -57,7 +57,7 @@
   font-weight: var(--card__text_weight);
   /* font-size: clamp(3.0625rem, 2.7104rem + 1.5024vw, 4.0625rem); */
   font-size: clamp(3.0625rem, 2.7104rem + 1.5024vw, 4.0625rem);
-  line-height: 1.0; /* для FireFox */
+  line-height: 1; /* для FireFox */
 }
 
 .header__text {
@@ -105,35 +105,43 @@
 
 /* ФИЛЬТРЫ ИЗОБРАЖЕНИЙ КАРТОЧЕК */
 
-.filter-saturate { /* confucius */
+/* confucius */
+.filter-saturate {
   filter: saturate(120%) var(--card-image_common-filter);
 }
 
-.filter-contrast-brightness { /* cicero */
+/* cicero */
+.filter-contrast-brightness {
   filter: contrast(120%) brightness(110%) var(--card-image_common-filter);
 }
 
-.filter-blur-saturate { /* sakura */
+/* sakura */
+.filter-blur-saturate {
   filter: blur(0.01rem) saturate(150%) var(--card-image_common-filter);
 }
 
-.filter-sepia { /* iskander */
+/* iskander */
+.filter-sepia {
   filter: sepia(80%) var(--card-image_common-filter);
 }
 
-.filter-grayscale { /* ford */
+/* ford */
+.filter-grayscale {
   filter: grayscale(0.25) var(--card-image_common-filter);
 }
 
-.filter-hue-rotate  { /* tolstoy */
+/* tolstoy */
+.filter-hue-rotate {
   filter: hue-rotate(20deg) var(--card-image_common-filter);
 }
 
-.filter-brightness-sepia { /* valery */
+/* valery */
+.filter-brightness-sepia {
   filter: brightness(110%) sepia(80%) var(--card-image_common-filter);
 }
 
-.filter-drop-shadow { /* zola */
+/* zola */
+.filter-drop-shadow {
   filter: var(--card-image_common-filter);
 }
 
