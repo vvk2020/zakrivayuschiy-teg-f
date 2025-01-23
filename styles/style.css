@@ -37,7 +37,6 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   max-inline-size: 700px;
-  /* min-block-size: 100dvb; */
   inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   font-variation-settings: "wght" 400; /* для github-тестов, уже задан через font: var(--main-font);*/
 }
@@ -55,7 +54,6 @@
 .header__title {
   padding-block-end: 20px;
   font-weight: var(--card__text_weight);
-  /* font-size: clamp(3.0625rem, 2.7104rem + 1.5024vw, 4.0625rem); */
   font-size: clamp(3.0625rem, 2.7104rem + 1.5024vw, 4.0625rem);
   line-height: 1; /* для FireFox */
 }
@@ -157,9 +155,9 @@
   mix-blend-mode: hard-light;
 }
 
-.card__text {
+/* .card__text {
   text-shadow: 1px 1px 2px var(--card__text_shadow-color);
-}
+} */
 
 .card__board {
   padding: 25px;
@@ -169,9 +167,9 @@
   padding-block-start: 27px;
 }
 
-.card__text p:last-of-type {
+/* .card__text p:last-of-type {
   text-shadow: 1px 1px 2px var(--heartbeat-color);
-}
+} */
 
 .button-panel {
   display: flex;
