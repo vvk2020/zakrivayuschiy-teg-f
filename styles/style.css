@@ -293,6 +293,7 @@
   background-color: var(--bg_color);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+  min-block-size: 38px;
 }
 
 .button:focus {
@@ -356,8 +357,8 @@
 
 .dialog-save {
   border: var(--border-line);
-  padding: 30px;
-  inline-size: 357px;
+  padding: 29px 30px; /* Pixel Perfect, fig: 30px */
+  max-inline-size: 357px;
 }
 
 .dialog-save::backdrop {
@@ -385,8 +386,7 @@
 .dialog-save__button-close {
   margin-block-start: 30px;
   padding-block: 9px; /* 12.5px => Pixel Perfect */
-  font: var(--accent-font);
-  line-height: 110%;
+  line-height: 90%;
   inline-size: 100%;
 }
 
@@ -414,8 +414,8 @@
   }
 
   .dialog-save {
-    padding-inline: 40px;
-    inline-size: 341px;
+    padding: 30px 40px;
+    max-inline-size: 341px;
   }
 }
 
